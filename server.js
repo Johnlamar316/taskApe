@@ -13,9 +13,11 @@ const profile = require("./router/apis/profile");
 const todos = require("./router/apis/todos");
 const posts = require("./router/apis/posts");
 
+//database config
+const db = require("./config/keys").mongoURI;
 //connect to mongoDB
 mongoose
-    .connect("mongodb://localhost/taskApe", {
+    .connect(db, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useFindAndModify: false
