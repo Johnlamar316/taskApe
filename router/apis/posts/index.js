@@ -177,32 +177,33 @@ router.post(
 // @route   DELETE api/posts/comments/:id/:comment_id
 // @desc    remove comments to post
 // @access  private
-// router.delete(
-//     "/comments/:id/:comment_id",
-//     passport.authenticate("jwt", { session: false }),
-//     (req, res) => {
-//         Profile.findOne({ user: req.user.id }).then(profile => {
-//             Post.findById(req.params.id)
-//                 .then(post => {
-//                     //check to see if the comments exist
-//                     if (post.comments.filter(comment => comment._id.toString() === req.params.comment_id).length === 0) {
-//                         return res.status(404).json({
-//                             message: "comments doesn't exist"
-//                         });
-//                     }
-//                     //get remove index
-//                     const removeIndex = post.comments
-//                         .map(item => item._id.toString())
-//                         .indexOf(req.params.comment_id);
-//
-//                     //using splice to remove
-//                     post.comments.splice(removeIndex, 1);
-//
-//                     post.save().then(post => res.json(post));
-//                 })
-//                 .catch(err => res.status(404).json({ message: "no post found" }));
-//         });
-//     }
-// );
+router.delete(
+    "/comments/:id/:commentId",
+    passport.authenticate("jwt", { session: false }),
+    (req, res) => {
+        Profile.findOne({ user: req.user.id }).then(profile => {
+            Post.findById(req.params.id)
+                .then(post => {
+                    //check to see if the comments exist
+                    if (post.comments.filter(comment => comment._id.toString() === req.params.commentId).length === 0) {
+                        return res.status(404).json({
+                            status: true,
+                            message: "comments doesn't exist"
+                        });
+                    }
+                    //get remove index
+                    const removeIndex = post.comments
+                        .map(item => item._id.toString())
+                        .indexOf(req.params.comment_id);
+
+                    //using splice to remove
+                    post.comments.splice(removeIndex, 1);
+
+                    post.save().then(post => res.json(post));
+                })
+                .catch(err => res.status(404).json({ status: false, message: "no post found" }));
+        });
+    }
+);
 
 module.exports = router;
