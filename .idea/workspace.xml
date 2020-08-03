@@ -20,19 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58c884c5-5c83-4afd-9228-699fc0cf757c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/validation/post.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/validation/profile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/keys_dev.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/keys_dev.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Users.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/Users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/router/apis/posts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/router/apis/posts/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/apis/profile/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/router/apis/profile/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/apis/todos/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/router/apis/todos/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/apis/users/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/router/apis/users/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
