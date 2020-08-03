@@ -7,18 +7,13 @@ const ProfileSchema = new Schema ({
         type: Schema.Types.ObjectId,
         ref: "user"
     },
-    handle: {
-        type: String,
-        required: true,
-        max: 40
-    },
     company: {
         type: String
     },
     website: {
         type: String
     },
-    motivation: {
+    githubusername: {
         type: String
     },
     social: {
@@ -43,4 +38,5 @@ const ProfileSchema = new Schema ({
         default: Date.now
     }
 })
-module.exports = Profile = mongoose.model("profile", ProfileSchema);
+
+module.exports = mongoose.model("profile", ProfileSchema);
