@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58c884c5-5c83-4afd-9228-699fc0cf757c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/router/apis/posts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/router/apis/posts/index.js" afterDir="false" />
     </list>
@@ -60,6 +61,12 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$USER_HOME$/clients" />
+    </key>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -88,6 +95,10 @@
       <workItem from="1596363722134" duration="4435000" />
       <workItem from="1596369573259" duration="34000" />
       <workItem from="1596371639057" duration="10871000" />
+      <workItem from="1596579325382" duration="16000" />
+      <workItem from="1596583671876" duration="2530000" />
+      <workItem from="1596589942981" duration="45000" />
+      <workItem from="1596590289525" duration="7000" />
     </task>
     <servers />
   </component>
@@ -107,14 +118,18 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="0" y="0" width="1680" height="1050" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595778280198">
+    <state x="0" y="752" width="305" height="298" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596585948460">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="0" y="0" width="1680" height="1050" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1595778280198" />
+    <state x="0" y="752" width="305" height="298" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1596585948460" />
     <state x="573" y="301" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595844326919">
       <screen x="0" y="0" width="1680" height="1002" />
     </state>
     <state x="573" y="301" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1680.1002@0.0.1680.1002" timestamp="1595844326919" />
+    <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596584706366">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1596584706366" />
     <state x="505" y="248" width="670" height="675" key="run.anything.popup" timestamp="1595805045516">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
