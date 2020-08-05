@@ -112,7 +112,7 @@ router.post("/like/:id", passport.authenticate("jwt", { session: false }),
 // @route   POST api/posts/unlike/:id
 // @desc    dislike post
 // @access  private
-router.post("unlike/:id", passport.authenticate("jwt", { session: false }),
+router.post("/unlike/:id", passport.authenticate("jwt", { session: false }),
     (req, res) => {
     Profile.findOne({user: req.user.id})
         .then(profile => {
