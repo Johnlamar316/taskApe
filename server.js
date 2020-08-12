@@ -2,7 +2,11 @@ const express = require('express')
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
+const cors = require("cors");
 const app = express()
+
+// CORS-enabled web server listening in the same local port
+app.use(cors());
 
 // body Parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));

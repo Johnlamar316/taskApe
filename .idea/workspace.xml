@@ -20,9 +20,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58c884c5-5c83-4afd-9228-699fc0cf757c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/Auth/Register/RegisterForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/Auth/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/Auth/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/_shared/components/CustomRoute/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/_shared/components/ReduxFormField/TextInput/TextInput.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/apis/posts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/router/apis/posts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +41,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="SCSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -53,6 +63,7 @@
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -60,6 +71,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -99,6 +111,9 @@
       <workItem from="1596583671876" duration="2530000" />
       <workItem from="1596589942981" duration="45000" />
       <workItem from="1596590289525" duration="7000" />
+      <workItem from="1596640541771" duration="8331000" />
+      <workItem from="1596660558244" duration="5036000" />
+      <workItem from="1596703222934" duration="4000" />
     </task>
     <servers />
   </component>
@@ -118,10 +133,11 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="0" y="752" width="305" height="298" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596585948460">
+    <state x="0" y="752" width="305" height="298" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596665702184">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="0" y="752" width="305" height="298" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1596585948460" />
+    <state x="332" y="486" width="305" height="298" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1002@0.0.1680.1002" timestamp="1596641090316" />
+    <state x="0" y="752" width="305" height="298" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1596665702184" />
     <state x="573" y="301" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595844326919">
       <screen x="0" y="0" width="1680" height="1002" />
     </state>
@@ -130,6 +146,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1596584706366" />
+    <state x="341" y="164" key="SettingsEditor" timestamp="1596661957615">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="341" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1596661957615" />
     <state x="505" y="248" width="670" height="675" key="run.anything.popup" timestamp="1595805045516">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
