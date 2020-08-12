@@ -72,10 +72,9 @@ router.post("/register", (req,res) => {
                         .save()
                         .then((user) => res.json({
                             _meta: {
-                                status: true,
+                                status: 200,
                                 message: "registration successful"
                             },
-                            user
                         })
                         ).catch((err) => console.log(err))
                 })
@@ -100,7 +99,7 @@ router.post("/login", (req,res) => {
         //check for user
         if (!user) {
             return res.status(404).json({
-                status: false,
+                status: 404,
                 message: `User not found`,
             });
         }
@@ -115,7 +114,7 @@ router.post("/login", (req,res) => {
                     if(err) throw err;
                     res.json({
                         _meta: {
-                            status: true,
+                            status: 200,
                             message: `Welcome back ${user.username}`,
                             token: "Bearer " + token //authenticating bearer
                         },
@@ -129,7 +128,7 @@ router.post("/login", (req,res) => {
                 })
             } else {
                 return res.status(400).json({
-                    status: false,
+                    status: 400,
                     message: "password not found",
                 });
             }
@@ -156,13 +155,6 @@ router.get(
 //@desc     reset password
 //@access   public
 router.post("/reset-password", (req, res) => {
-    // bringing data from input validation using destructuring
-    const { getErrors, isValid } = validateRegisterInput(req.body);
-    if(!isValid) {  //it will turn false cus there is an error string there from register  validation
-        //check validation
-        return res.status(400).json(getErrors);
-    }
-
     User.findOne({ email: req.body.email })
         .then((user) => {
             if (!user) {
@@ -194,7 +186,7 @@ router.post("/reset-password", (req, res) => {
                         "Please click on the following link, or paste this into your browser to complete the process:\n\n" +
                         "http://" + req.headers.host + "/api/users/reset/" + token + "\n\n" +
                         "If you did not request this, please ignore this email and your password will remain unchanged.\n",
-                };
+                    };
 
                 smtpTransport.sendMail(mailOptions, (err, response) => {
                     if (err) {
