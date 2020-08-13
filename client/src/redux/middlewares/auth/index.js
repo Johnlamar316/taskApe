@@ -1,4 +1,25 @@
-import { navigateTo, apiRequest, REGISTER, POST } from "../../actions/index";
+import {
+  navigateTo,
+  apiRequest,
+  REGISTER,
+  POST,
+  LOGIN,
+} from "../../actions/index";
+
+const login = ({ dispatch }) => (next) => (action) => {
+  next(action);
+  if (action.type === LOGIN.START) {
+    dispatch({
+      method: POST,
+      url: "users/login",
+      key: "login",
+      onSuccess: (data) => {
+        dispatch({ type: LOGIN.SUCCESS, payload: data });
+        dispatch(navigateTo("/dashboard"));
+      },
+    });
+  }
+};
 
 const register = ({ dispatch }) => (next) => (action) => {
   next(action);
@@ -18,4 +39,4 @@ const register = ({ dispatch }) => (next) => (action) => {
   }
 };
 
-export default [register];
+export default [register, login];
