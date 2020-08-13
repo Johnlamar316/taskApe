@@ -11,4 +11,17 @@ const defaultOptions = {
 // Update instance
 const instance = axios.create(defaultOptions);
 
+// Add a response interceptor
+instance.interceptors.response.use(
+  (response) => {
+    // Do something with response data
+    return response.data;
+  },
+  (error) => {
+    // Do something with response error
+    return Promise.reject(error.response);
+  }
+);
+export default instance;
+
 export const createAPIRequest = (config) => instance(config);

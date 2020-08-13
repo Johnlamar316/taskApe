@@ -11,7 +11,7 @@ const Main = ({register}) => {
 
   return (
     <div>
-      <RegisterForm onSubmit={handleRegisterSubmit} />
+      <RegisterForm onSubmit={handleRegisterSubmit} /> 
     </div>
   );
 };

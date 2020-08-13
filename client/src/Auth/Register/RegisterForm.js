@@ -9,8 +9,8 @@ import taskApelogo from "../../_shared/svg/TaskApe.svg";
 
 // import App from "../../App";
 
-const RegisterForm = (props) => {
-  const { onSubmit } = props;
+const RegisterForm = (props) => { 
+  const { onSubmit } = props; 
 
   const validate = (fieldName) => (formInstance) => ({
     validator(rule, value) {
@@ -64,7 +64,7 @@ const RegisterForm = (props) => {
   });
 
   return (
-    <Row className="d-flex justify-content-center align-items-center auth-layout">
+    <Row justify={'center'} align={'middle'} className="auth-layout">
       <Col className="border p-5 shadow auth-width bg-white">
         <div className="text-center mb-4">
           <img src={taskApelogo} alt="Logo" />
