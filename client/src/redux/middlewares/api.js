@@ -28,8 +28,8 @@ const apiRequest = ({ dispatch }) => (next) => (action) => {
       errorMessage,
       noSuccessToast,
       noErrorToast,
-    } = action.meta; // from the third func parameter
-    console.log("........", action.meta);
+    } = action.meta;
+
     const config = { method, url };
 
     if (payload && !isEmpty(payload)) {
@@ -41,7 +41,7 @@ const apiRequest = ({ dispatch }) => (next) => (action) => {
     }
     createAPIRequest(config)
       .then((response) => {
-        console.log("RESPONSE:::::: ", response);
+        console.log("RESPONSE:::::: ", response); 
         const { data, _meta } = response;
         if (onSuccess) {
           if (typeof onSuccess === "function") {

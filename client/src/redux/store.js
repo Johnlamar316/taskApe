@@ -19,7 +19,7 @@ const rootReducer = (state, action) => {
 const middleWares = [ ...customMiddleWares, routerMiddleware(history)];
 
 //include redux logger if not in production
-if (process.env.NODE_ENV !== "production") {
+if (process.env.NODE_ENV !== "production") { 
   middleWares.push(createLogger());
 }
 
@@ -40,7 +40,7 @@ if (
 const persistedState = loadState();
 
 // create the store
-const store = createStore(rootReducer, persistedState, parseMiddleware);
+const store = createStore(rootReducer, persistedState, parseMiddleware); 
 
 //subscribe to store
 // store.subscribe is called any time an action is dispatched(state changes)
@@ -50,7 +50,7 @@ store.subscribe(
     saveState({ auth: store.getState().auth });
   }, 1000)
 );
-console.log("STORE::::::", store);
+console.log("STORE::::::", store); 
 
 // exporting the store.
 export default store; 
