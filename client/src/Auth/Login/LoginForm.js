@@ -9,7 +9,7 @@ import InputField from "../../_shared/components/ReduxFormField/TexInput/TextInp
 import taskApelogo from "../../_shared/svg/TaskApe.svg";
 
 
-const LoginForm = props => {
+const LoginForm = props => {  
   const { onSubmit } = props;
   
   const validate = (fieldName) => (formInstance) => ({

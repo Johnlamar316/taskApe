@@ -1,4 +1,5 @@
 import axios from "axios";
+import authService from "./auth";
 
 // Default config options
 const defaultOptions = {
@@ -11,6 +12,19 @@ const defaultOptions = {
 // Update instance
 const instance = axios.create(defaultOptions);
 
+// //set the Auth token for any response
+// instance.interceptors.request.use(
+//   (config) => {
+//     const token = authService.getUserSession(); // token
+//     config.header["Authorization"] = token;
+//     return config;
+//   },
+//   (error) => {
+//     // Do something with request error
+//     return Promise.reject(error);
+//   }
+// );
+
 // Add a response interceptor
 instance.interceptors.response.use(
   (response) => {
@@ -22,6 +36,7 @@ instance.interceptors.response.use(
     return Promise.reject(error.response);
   }
 );
+
 export default instance;
 
 export const createAPIRequest = (config) => instance(config);

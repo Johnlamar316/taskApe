@@ -9,15 +9,18 @@ import {
 const login = ({ dispatch }) => (next) => (action) => {
   next(action);
   if (action.type === LOGIN.START) {
-    dispatch({
-      method: POST,
-      url: "users/login",
-      key: "login",
-      onSuccess: (data) => {
-        dispatch({ type: LOGIN.SUCCESS, payload: data });
-        dispatch(navigateTo("/dashboard"));
-      },
-    });
+    dispatch(
+      apiRequest({
+        method: POST,
+        url: "/users/login",
+        key: "login",
+        onSuccess: (data) => {
+          dispatch({ type: LOGIN.SUCCESS, payload: data });
+          dispatch(navigateTo("/dashboard"));
+        },
+        ...action.meta, 
+      })
+    );
   }
 };
 

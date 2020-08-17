@@ -116,13 +116,14 @@ router.post("/login", (req,res) => {
                         _meta: {
                             status: 200,
                             message: `Welcome back ${user.username}`,
-                            token: "Bearer " + token //authenticating bearer
+                            session: token,
                         },
                         data: {
                             id: user.id,
                             username: user.username,
                             email: user.email,
                             date: user.date,
+                
                         },
                     });
                 })

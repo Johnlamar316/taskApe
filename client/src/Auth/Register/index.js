@@ -7,8 +7,6 @@ const Main = ({register}) => {
   const handleRegisterSubmit = (data) => {
     register(data);
   };
-
-
   return (
     <div>
       <RegisterForm onSubmit={handleRegisterSubmit} /> 

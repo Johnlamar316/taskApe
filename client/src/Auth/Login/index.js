@@ -4,7 +4,8 @@ import { connect } from "react-redux";
 import { login } from "../../redux/actions/index";
 
 const Main = (props) => {
-  const onSubmit = (data) => {
+  const {login} = props;
+  const onSubmit = (data) => { 
     login(data);
   };
   return (
@@ -19,4 +20,4 @@ const mapDispatchToProps = {
   login
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Main);
+export default connect(mapStateToProps, mapDispatchToProps)(Main); 

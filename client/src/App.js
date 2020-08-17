@@ -1,8 +1,7 @@
 import React, { Fragment, lazy, Suspense } from "react";
 import { Switch, Route } from "react-router-dom";
-import { Slide, ToastContainer, toast } from "react-toastify";
 import { Spin } from "antd";
-// import Route from "./_shared/components/CustomRoute";
+import PrivateRoute from "./_shared/components/CustomRoute";
 
 //styling
 // import "bootstrap/dist/css/bootstrap.min.css";
@@ -20,6 +19,8 @@ const ResetPasswordAuth = lazy(() =>
 const UpdatePasswordAuth = lazy(() =>
   import("./Auth/ResetPassword/UpdatePasswordForm.js")
 );
+
+const Dashboard = lazy(() => import("./module/Dashboard/index.js"));
 
 const loading = () => (
   <div className="example">
@@ -51,6 +52,13 @@ const App = () => {
             path="/reset/:token"
             name="reset password"
             component={UpdatePasswordAuth}
+          />
+          <PrivateRoute
+            path="/dashboard"
+            exact={true}
+            name="dashboard"
+            isPrivate={true}
+            component={Dashboard}
           />
         </Switch>
       </Suspense>
