@@ -46,7 +46,7 @@ const LoginForm = props => {
         <div className="text-center mb-4">
           <img src={taskApelogo} alt="Logo" />
           <h5 className="mt-2 mb-3">Your Every day’s to-do App</h5>
-          <h6 className="text-secondary">Sign in to your account</h6>
+          <h6 className="text-secondary">Sign in to your account</h6> 
         </div>
 
         <Form

@@ -12,18 +12,18 @@ const defaultOptions = {
 // Update instance
 const instance = axios.create(defaultOptions);
 
-// //set the Auth token for any response
-// instance.interceptors.request.use(
-//   (config) => {
-//     const token = authService.getUserSession(); // token
-//     config.header["Authorization"] = token;
-//     return config;
-//   },
-//   (error) => {
-//     // Do something with request error
-//     return Promise.reject(error);
-//   }
-// );
+//set the Auth token for any request
+instance.interceptors.request.use(
+  (config) => {
+    const token = authService.getUserSession(); // token
+    config.headers["Authorization"] = token;
+    return config;
+  },
+  (error) => {
+    // Do something with request error
+    return Promise.reject(error);
+  }
+);
 
 // Add a response interceptor
 instance.interceptors.response.use(

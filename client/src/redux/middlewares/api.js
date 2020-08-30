@@ -2,7 +2,7 @@ import React from "react";
 import { isEmpty } from "lodash";
 import { createAPIRequest } from "../../service/axios";
 import { message } from "antd";
-import { API_REQUEST } from "../actions/index";
+import { API_REQUEST, updateSessionToken } from "../actions/index";
 
 //atd message
 const atderror = (err) => {
@@ -41,15 +41,18 @@ const apiRequest = ({ dispatch }) => (next) => (action) => {
     }
     createAPIRequest(config)
       .then((response) => {
-        console.log("RESPONSE:::::: ", response); 
+        console.log("RESPONSE:::::: ", response);
         const { data, _meta } = response;
+        if (_meta && _meta.session) {
+          dispatch(updateSessionToken(_meta.session));
+        }
         if (onSuccess) {
           if (typeof onSuccess === "function") {
             const { message } = _meta;
             onSuccess(data);
             atdsuccess(message);
           } else {
-            dispatch({ type: onSuccess, payload: data });
+            dispatch({ type: onSuccess, payload: data }); 
           }
         }
       })
