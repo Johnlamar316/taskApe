@@ -5,7 +5,8 @@ import { login } from "../../redux/actions/index";
 
 const Main = (props) => {
   const {login} = props;
-  const onSubmit = (data) => { 
+  const onSubmit = (data) => {  
+    console.log("ACTION_DATAA::::", data)
     login(data);
   };
   return (

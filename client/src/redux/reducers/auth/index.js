@@ -1,9 +1,9 @@
-import { LOGIN } from "../../actions";
+import { LOGIN, UPDATE_SESSION_TOKEN } from "../../actions";
 
 const initialState = {
   user: {
     data: null,
-    session: null, 
+    session: null,
   },
   current: null,
   byId: {},
@@ -17,6 +17,13 @@ export default (state = initialState, action) => {
         user: {
           ...state.user,
           data: action.payload,
+        },
+      });
+    case UPDATE_SESSION_TOKEN:
+      return Object.assign({}, state, {
+        user: {
+          ...state.user,
+          session: action.payload,
         },
       });
     default:

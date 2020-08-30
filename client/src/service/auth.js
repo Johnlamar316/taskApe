@@ -4,7 +4,7 @@ import store from "../redux/store";
 class AuthService {
   constructor() {
     this.isLoggedIn = this.isLoggedIn.bind(this);
-    this.getUserSession = this.getUserSession.bind(this);
+    this.getUserSession = this.getUserSession.bind(this); 
   }
 
   getUserSession() {
@@ -19,7 +19,7 @@ class AuthService {
       try {
         const decode = jwtDecode(token);
         const sessionTimeExp = decode.exp;
-        return sessionTimeExp > new Date().getTime() / 1000; 
+        return sessionTimeExp > new Date().getTime() / 1000;  
       } catch (e) {
         console.log("token decode err:::::", e.message);
         return false;

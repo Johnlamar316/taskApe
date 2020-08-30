@@ -6,7 +6,7 @@ import {
   LOGIN,
 } from "../../actions/index";
 
-const login = ({ dispatch }) => (next) => (action) => {
+const login = ({ dispatch }) => (next) => (action) => { 
   next(action);
   if (action.type === LOGIN.START) {
     dispatch(
@@ -15,6 +15,7 @@ const login = ({ dispatch }) => (next) => (action) => {
         url: "/users/login",
         key: "login",
         onSuccess: (data) => {
+          console.log("MIDDLEWARE_DATA", data);
           dispatch({ type: LOGIN.SUCCESS, payload: data });
           dispatch(navigateTo("/dashboard"));
         },

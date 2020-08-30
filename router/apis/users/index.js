@@ -115,7 +115,7 @@ router.post("/login", (req,res) => {
                     res.json({
                         _meta: {
                             status: 200,
-                            message: `Welcome back ${user.username}`,
+                            message: `Welcome ${user.username}`,
                             session: token,
                         },
                         data: {
@@ -123,7 +123,6 @@ router.post("/login", (req,res) => {
                             username: user.username,
                             email: user.email,
                             date: user.date,
-                
                         },
                     });
                 })
